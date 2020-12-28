@@ -9,6 +9,8 @@ class Support : public QObject
 
     Q_PROPERTY( QString title READ title NOTIFY titleChanged )
 
+//    Q_CLASSINFO( "RegisterEnumClassesUnscoped", "false" )
+
 
   public:
 
@@ -21,6 +23,16 @@ class Support : public QObject
       Fffff
     };
     Q_ENUM( ETestB );
+
+//    enum class ETestC
+//    {
+//      Ggggg,
+//      Ddddd,
+//      Eeeee,
+//      Fffff
+//    };
+//    Q_ENUM( ETestC );
+
 
     QString title( void ) const;
 
@@ -36,5 +48,7 @@ class Support : public QObject
     QString mTitle;
 
 };
+
+//typedef Support::ETestB ETestB;
 
 #endif // SUPPORT_H

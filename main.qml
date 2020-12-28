@@ -2,8 +2,10 @@ import QtQuick 2.10
 import QtQuick.Window 2.10
 import QtQuick.Controls 2.12
 
-import com.company.statemachine 1.0
+import com.company.statemachine         1.0
+import com.company.statemachine.support 1.0
 
+//import Support 1.0
 
 
 Window
@@ -16,15 +18,15 @@ Window
 
     title: qsTr( "Hello World" )
 
-    Connections
-    {
-        target: StateMachine
+//    Connections
+//    {
+//        target: StateMachine
 
-        onStateChanged:
-        {
-            console.log( "Window State: " + StateMachine.state );
-        }
-    }
+//        onStateChanged:
+//        {
+//            console.log( "Window State: " + StateMachine.state );
+//        }
+//    }
 
 //    StateBox
 //    {
@@ -70,9 +72,9 @@ Window
           console.log( "Aaaaa: ", StateMachine.Bbbbb );
           console.log( "Aaaaa: ", StateMachine.Ccccc );
 
-          console.log( "Ddddd: ", StateMachine.support.Ddddd );
-          console.log( "Eeeee: ", StateMachine.support.Eeeee );
-          console.log( "Fffff: ", StateMachine.support.Fffff );
+          console.log( "Ddddd: ", Support.Ddddd );
+          console.log( "Eeeee: ", Support.Eeeee );
+          console.log( "Fffff: ", Support.Fffff );
 
           return StateMachine.support.title;
         }

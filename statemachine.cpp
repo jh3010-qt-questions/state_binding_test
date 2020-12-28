@@ -9,8 +9,6 @@ StateMachine( QObject *parent ) : QObject(parent)
 {
     this->mSupport = new Support( this );
 
-    qmlRegisterUncreatableType<Support>( "StateMachine", 1, 0, "Support", QStringLiteral( "Support should not be created in QML" ) );
-
     qInfo() << "New State Machine";
 
     this->mState = "on";
